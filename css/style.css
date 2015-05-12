@@ -545,3 +545,74 @@ button::-moz-focus-inner {
 		margin:0 20px;
 	}
 }
+.fade {
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background:url('../img/fade_bg.png') repeat;
+}
+.modal {
+	display:none;
+	position:absolute;
+	left:50%;
+	top:100px;
+	z-index:1010;
+	width:368px;
+	padding:32px 126px 24px;
+	margin-left:-310px;
+	background:#ffffff;
+}
+.modal .close {
+	position:absolute;
+	right:2px;
+	top:2px;
+	width:21px;
+	height:22px;
+	cursor:pointer;
+	background:url('../img/modal_close.png') no-repeat center center;
+}
+.modal h5 {
+	font-size:18px;
+	line-height:24px;
+	font-weight:normal;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 22px;
+}
+.modal p {
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 12px;
+}
+.modal p i {
+	display:block;
+	margin:0 0 5px;
+}
+.modal p input, .modal p textarea {
+	width:100%;
+	font-size:14px;
+	padding:14px 15px 15px;
+	background:#f2f2f2;
+}
+.modal p textarea {
+	resize:vertical;
+	margin:0 0 -4px;
+}
+.modal button {
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:7px 17px 7px 16px;
+	margin:10px 0 12px;
+	background:#b6c923;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}

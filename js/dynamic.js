@@ -78,6 +78,27 @@ $(document).ready(function() {
 			}
 		);
 	}
+	$('.modal').append('<span class="close"></span>');
+	$('[data-open]').bind('click', function() {
+		var e = $('[data-modal="'+$(this).attr('data-open')+'"]');
+		var t = $(document).scrollTop()+($(window).height()-e.outerHeight())/2;
+		if ( t < 0 ) {
+			t = 0;
+		}
+		if ( t > $('.wrapper').height()-e.outerHeight() ) {
+			t = $('.wrapper').height()-e.outerHeight();
+			$('html, body').animate({
+				scrollTop: t+'px'
+			}, '500');
+		}
+		e.stop(true,true).css({
+			'top': t+'px'
+		}).stop(true,true).fadeIn(200);
+		$('.fade').stop(true,true).fadeIn(200);
+	});
+	$('.modal .close, .fade').bind('click', function() {
+		$('.modal, .fade').stop(true,true).fadeOut(200);
+	});
 });
 $(window).resize(function() {
 	if ( $('.bg').length > 0 ) {
